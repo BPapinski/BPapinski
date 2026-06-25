@@ -61,16 +61,40 @@ Currently studying **Information Technology** (Information Systems Engineering) 
 
 ## 🚀 Projects
 
+### 🏗️ Integrated Tender Management Platform
+
+The following repositories form a distributed microservices-based system developed around a tender management platform. Each service has a dedicated responsibility and communicates through asynchronous messaging and shared authentication mechanisms.
+
+**Components:**
+- Randlab-Przetargowisko — main business application
+- User Management Service — authentication, authorization and user lifecycle management
+- Notification Service — event-driven email delivery and audit logging
+
+---
+
+### 📑 [Randlab-Przetargowisko](https://github.com/BPapinski/Randlab-Przetargowisko)
+
+A full-stack tender management platform developed during my internship at Randlab Software. The application allows users to create, manage and track tenders through a modern web interface. Built with a service-oriented architecture and integrated with dedicated authentication and notification services.
+
+**Key features:**
+- Tender creation and management
+- User authentication and authorization
+- RESTful API architecture
+- PostgreSQL-backed data storage
+- Integration with external microservices
+- Dockerized development environment
+
+**Stack:** Python · Django · Django REST Framework · React · PostgreSQL · Docker
+
 ### 🔐 [User Management Service](https://github.com/BPapinski/user-management-service)
-A production-grade RESTful microservice for user lifecycle management built on a fully async Python stack. Handles registration (with S3 avatar upload), JWT authentication (access + refresh tokens), role-based access control (`ADMIN` / `MODERATOR` / `USER`), paginated user listing, user groups, and a password-reset flow via RabbitMQ. Token sessions are invalidated using Redis.
+A dedicated authentication and user management microservice that serves as the identity provider for the Tender Management Platform. Handles registration, JWT authentication, role-based access control, user groups and password recovery workflows. Communicates with Notification Service through RabbitMQ events.
 
 **Stack:** Python 3.12 · FastAPI · SQLAlchemy (async) · PostgreSQL · Redis · RabbitMQ · AWS S3 · Alembic · Docker · GitHub Actions
 
 ---
 
 ### 📬 [Notification Service](https://github.com/BPapinski/notification-service)
-An event-driven background worker — no HTTP layer. Consumes password-reset messages from a RabbitMQ queue, validates them with Pydantic v2, persists an audit record to MongoDB, and delivers transactional HTML emails via AWS SES. Failed messages are retried up to 4 times and then forwarded to a dead-letter queue for manual inspection.
-
+An event-driven notification microservice that supports the Tender Management Platform ecosystem. Consumes password-reset and user-related events from RabbitMQ, stores audit information in MongoDB and delivers transactional emails through AWS SES.
 **Stack:** Python 3.12 · RabbitMQ (pika) · MongoDB · AWS SES · Pydantic v2 · Docker · GitHub Actions
 
 ---
@@ -90,6 +114,9 @@ A leisure planning application that generates optimised sightseeing routes based
 **Stack:** Python · FastAPI · PostgreSQL · Docker · Maps / Geolocation APIs
 
 ---
+
+> 💡 **Architecture note:**  
+> Randlab-Przetargowisko, User Management Service and Notification Service were designed to work together as a distributed system. Authentication and user management are handled by User Management Service, while Notification Service processes asynchronous events and email delivery for the platform.
 
 ## 📊 GitHub Stats
 
