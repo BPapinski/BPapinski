@@ -11,7 +11,7 @@
 
 ---
 
-I'm a Python backend developer with hands-on experience building scalable microservices, RESTful APIs, and distributed systems. I specialize in designing event-driven architectures, implementing authentication systems, and deploying production-ready solutions on AWS. I'm passionate about clean code, system design, and building things that work reliably at scale.
+I'm a Python backend developer with hands-on experience building scalable microservices, RESTful APIs, and distributed systems. I specialize in designing event-driven architectures, implementing authentication mechanisms, and optimizing database operations for production environments.
 
 Currently studying **Information Technology** (Information Systems Engineering) at Warsaw University of Life Sciences.
 
@@ -21,10 +21,11 @@ Currently studying **Information Technology** (Information Systems Engineering) 
 
 | Project | Description | Stack |
 |---------|-------------|-------|
-| **[User Management Service](https://github.com/BPapinski/user-management-service)** | Identity provider for distributed systems with JWT auth, role-based access control, and async database operations | FastAPI · SQLAlchemy · PostgreSQL · Redis · RabbitMQ · AWS S3 |
-| **[Notification Service](https://github.com/BPapinski/notification-service)** | Event-driven microservice for email delivery and audit logging via RabbitMQ | FastAPI · RabbitMQ · MongoDB · AWS SES · Pydantic v2 |
+| **[User Management Service](https://github.com/BPapinski/user-management-service)** | Identity provider for distributed systems with JWT auth, role-based access control, and async database operations | FastAPI · SQLAlchemy · PostgreSQL · Redis · AWS |
+| **[Notification Service](https://github.com/BPapinski/notification-service)** | Event-driven microservice for email delivery and audit logging via RabbitMQ | FastAPI · RabbitMQ · MongoDB · AWS SES · Docker |
 | **[Randlab-Przetargowisko](https://github.com/BPapinski/Randlab-Przetargowisko)** | Full-stack tender management platform with integrated microservices | Django · DRF · React · PostgreSQL · Docker |
 | **[AngularTinder](https://github.com/BPapinski/AngularTinder)** | Dating app clone with microservice architecture and real-time features | Django · Angular 17 · PostgreSQL · Docker Compose |
+| **[SmartRoute](https://github.com/BPapinski/SmartRoute)** | Bachelor's thesis project - Leisure planning app with optimized sightseeing route generation | FastAPI · PostgreSQL · Geolocation APIs · Docker |
 
 ---
 
@@ -57,13 +58,13 @@ Currently studying **Information Technology** (Information Systems Engineering) 
 ## 💼 Professional Experience
 
 **Junior Backend Developer** — *SPRELLI Sp. z o.o.* · Feb 2026 – May 2026
-> Architected and developed backend microservices for a tutor–student marketplace platform built from scratch. Implemented cloud deployment pipelines and infrastructure monitoring with production-grade observability tools. Collaborated on scalable API design patterns and distributed system communication.
+> Architected and developed backend microservices for a tutor–student marketplace platform built from scratch. Implemented cloud deployment pipelines and infrastructure monitoring with production-grade reliability.
 
 **Junior Backend Developer Intern** — *Innowise Group* · Aug 2025 – Jan 2026
-> Built 3+ Python microservices using FastAPI and Django with PostgreSQL and AWS integration. Designed async database operations using SQLAlchemy ORM, implemented event-driven communication via RabbitMQ, and deployed containerized applications on AWS infrastructure focusing on scalability and maintainability.
+> Built 3+ Python microservices using FastAPI and Django with PostgreSQL and AWS integration. Designed async database operations using SQLAlchemy ORM, implemented event-driven communication via RabbitMQ, and deployed services on AWS.
 
 **Junior Fullstack Developer Intern** — *Randlab Software* · Jul 2025 – Aug 2025
-> Developed full-stack tender management system using Django REST Framework and React. Implemented RESTful API endpoints, database schema design with PostgreSQL, and modern UI components. Integrated microservices architecture for authentication and notifications.
+> Developed full-stack tender management system using Django REST Framework and React. Implemented RESTful API endpoints, database schema design with PostgreSQL, and modern UI components. Integrated microservices architecture.
 
 ---
 
@@ -71,7 +72,7 @@ Currently studying **Information Technology** (Information Systems Engineering) 
 
 ### 🏗️ Integrated Tender Management Platform
 
-A distributed microservices-based system designed with event-driven architecture, enabling asynchronous communication between independent services. Each microservice handles a specific business domain and communicates through RabbitMQ message queues.
+A distributed microservices-based system designed with event-driven architecture, enabling asynchronous communication between independent services. Each microservice handles a specific business domain with clear separation of concerns.
 
 **Architecture Overview:**
 - **Randlab-Przetargowisko** — Main business application (Django + React frontend)
@@ -150,13 +151,15 @@ A dating app clone demonstrating modern full-stack development with microservice
 
 ### 🗺️ SmartRoute *(Bachelor's Thesis — Work in Progress)*
 
-A leisure planning application that generates optimized sightseeing routes based on user location and preferences. Integrates geolocation APIs to fetch tourist attractions and calculates efficient routes.
+A leisure planning application that generates optimized sightseeing routes based on user location and preferences. Integrates geolocation APIs to fetch tourist attractions and calculates efficient routes using advanced algorithms.
 
-**Planned Features:**
-- Route optimization algorithm
-- Real-time location services
-- Integration with mapping APIs
-- Tourist attraction recommendations
+**Key Features:**
+- Route optimization algorithm with TSP-inspired approach
+- Real-time location services and geolocation
+- Integration with mapping APIs (Google Maps, OpenStreetMap)
+- Tourist attraction recommendations and filtering
+- Interactive route visualization
+- User preferences and route customization
 
 **Stack:** Python · FastAPI · PostgreSQL · Docker · Geolocation APIs
 
